@@ -1,0 +1,13 @@
+server:
+  port: 8888
+  tomcat:
+    accesslog:
+      enabled: true
+      directory: logs
+    basedir: ${HOME}/tomcat
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/git/spring/config
