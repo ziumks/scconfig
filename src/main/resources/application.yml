@@ -11,3 +11,10 @@ spring:
       server:
         git:
           uri: ${HOME}/git/spring/config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+          
