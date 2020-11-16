@@ -8,7 +8,7 @@ server:
 spring:
   datasource:
     url: jdbc:mariadb://zium02:3306/mydb
-    driver-class-name: org.mariadb.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     platform: mysql
     username: root
     password: ziumks
