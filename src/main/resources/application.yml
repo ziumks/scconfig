@@ -6,11 +6,26 @@ server:
       directory: logs
     basedir: ${HOME}/tomcat
 spring:
+  datasource:
+    url: jdbc:mariadb://zium02:3306/mydb
+    driver-class-name: org.mariadb.jdbc.Driver
+    platform: mysql
+    username: root
+    password: ziumks
+    hikari:
+      connection-timeout: 5000
+      maximum-pool-size: 4
   cloud:
     config:
       server:
-        git:
-          uri: ${HOME}/git/spring/config
+        default-label: master
+        jdbc:
+          sql: select `key`, `value` from `properties` where `application`=? and `profile`=? and `label`=?;
+          order: 0
+#        git:
+#          uri: ${HOME}/git/spring/config
+
+
 eureka:
   client:
     serviceUrl:
