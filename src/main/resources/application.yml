@@ -14,7 +14,7 @@ spring:
   datasource:
     url: jdbc:mariadb://zium02:3306/mydb
     driver-class-name: org.mariadb.jdbc.Driver
-    platform: mysql
+#    platform: mysql
     username: root
     password: ziumks
     hikari:
